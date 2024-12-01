@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/amazon-scraper.js",
+        "src": "api/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/amazon-scraper",
-        "dest": "api/amazon-scraper.js"
+        "src": "/api/(.*)",
+        "dest": "/api/index.js"
       }
     ]
   }
